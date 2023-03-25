@@ -1,0 +1,67 @@
+.container-card {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   object-fit: cover;
+   height: 450px;
+
+   /* height: 100%; */
+   width: 300px;
+   border-radius: 10px;
+   border-top-right-radius: 30px;
+   border: 1px solid white;
+
+   -webkit-backdrop-filter: blur(10px);
+   backdrop-filter: blur(7px);
+   transition: background-color, border-color, box-shadow ease-in-out 0.4s;
+}
+.container-card:hover {
+   background-color: #01b7cf7e;
+   border-color: #c1ee56;
+   box-shadow: 1px 1px 3px 3px #ffe600, 1px 1px 6px 6px #ff8800, 1px 1px 9px 9px #15ff00;
+}
+
+.img-api {
+   /* width: 80%; */
+   height: 50%;
+   object-fit: contain;
+   border-radius: 10px;
+}
+
+.container-card-title {
+   display: flex;
+   justify-content: space-evenly;
+   width: 90%;
+}
+
+.container-card-details {
+   text-align: left;
+   width: 90%;
+}
+
+.icon-like-fill {
+   color: red;
+   cursor: pointer;
+}
+
+.icon-like-no-fill {
+   color: transparent;
+   cursor: pointer;
+}
+
+.icon-card-available {
+   color: #00e774;
+}
+.icon-card-no-available {
+   color: red;
+}
+
+b {
+   color: #fff;
+   transition: color ease-in-out 0.7s;
+}
+b:hover {
+   color: #00e774;
+}
