@@ -16,7 +16,7 @@ function App() {
       try {
          const res = await fetch(RYM_API_FOR_NAME + name);
          console.log(res);
-         if (res.status != 404) {
+         if (res.status != 404 && name.length != 0) {
             const data = await res.json();
             const data2 = data.results;
             setCardForName(data2);
