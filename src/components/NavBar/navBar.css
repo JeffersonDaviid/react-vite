@@ -1,0 +1,143 @@
+.container-nav {
+   padding: 10px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   flex-wrap: wrap;
+   /* background-color: red; */
+   position: relative;
+}
+
+.nav-icon-logo {
+   cursor: pointer;
+   width: 40px;
+   height: 40px;
+   border-radius: 50px;
+   object-fit: cover;
+}
+
+.container-nav-search {
+   text-align: center;
+   flex-grow: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+}
+
+.nav-search {
+   padding: 3px 10px;
+   border-radius: 26px;
+   width: 50%;
+}
+
+.icon-search-nav {
+   height: 20px;
+   width: 20px;
+   color: #04ff0e;
+   cursor: pointer;
+}
+
+.container-items {
+   margin: 0;
+   padding: 60px 0;
+   position: fixed;
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   list-style: none;
+   user-select: none;
+   top: 0;
+   bottom: 0;
+   right: -75%;
+
+   gap: 30px;
+   height: 100vh;
+   width: 60%;
+   z-index: 10000;
+   background-color: #222;
+   transition: right ease-in-out 0.5s;
+}
+
+.nav-item {
+   cursor: pointer;
+   position: relative;
+   display: inline-block;
+   font-weight: 500;
+   overflow: hidden;
+   background: linear-gradient(to right, #ecfd00 50%, #04ff0e 50%);
+
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-size: 200%;
+   background-position: 200%;
+
+   transition: background-position 0.5s ease-in;
+   transition: transform 0.1s ease-in-out;
+}
+
+.nav-item:hover {
+   z-index: 100;
+   background-position: 100%;
+   transform: scale(1.2);
+
+   transition: background-position ease-in-out 0.5s, transform 0.1s ease-in-out;
+}
+
+.icon-menu-nav {
+   height: 30px;
+   width: 30px;
+   color: #04ff0e;
+   cursor: pointer;
+   z-index: 100000000000;
+}
+
+.nav-menu-mobile {
+   right: 0%;
+}
+.icon-close-navbar {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   color: #04ff0e;
+   cursor: pointer;
+}
+
+/* TABLET*/
+@media (min-width: 767px) {
+   .icon-close-navbar,
+   .icon-menu-nav {
+      display: none;
+   }
+
+   .container-items {
+      margin: 0;
+      padding: 0;
+      position: initial;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      height: 100%;
+      max-width: 350px;
+      z-index: 1000000000;
+      background-color: transparent;
+      transition: right ease-in-out 1s;
+   }
+}
+
+/* DESKTOP*/
+@media (min-width: 1024px) {
+   .container-nav {
+      margin: auto;
+      max-width: 1366px;
+   }
+}
+
+.active {
+   color: red;
+}

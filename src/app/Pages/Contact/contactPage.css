@@ -1,0 +1,47 @@
+.container-contact {
+   font-family: sans-serif;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 40px 0;
+
+   /* background-color: #d40a0a; */
+}
+
+.container-inputs {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 15px;
+   width: 100%;
+}
+
+form input,
+form textarea {
+   border-radius: 5px;
+   padding: 5px 10px;
+   outline-style: none;
+   border: 0px;
+   max-width: 80%;
+   width: 80%;
+
+   background-color: #22222253;
+   border-bottom: 1px solid #04ff0e;
+   color: #fff;
+}
+
+.inputs-title {
+   text-align: center;
+}
+
+.input-message {
+   resize: none;
+}
+
+.btn-send-message {
+   background-color: transparent;
+   margin: 20px 0;
+   color: #fff;
+   border: 1px solid #04ff0e;
+   color: #9fff04;
+}

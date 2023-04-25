@@ -1,34 +1,12 @@
 import { createContext, useState, useEffect } from 'react';
+// import { getUsuarios } from '../app/Backend/conection';
 
 export const StoreContext = createContext();
 
 export const StoreContextProvider = (props) => {
-   const heroPortrait = [
-      {
-         id: 361,
-         name: 'Toxic Rick',
-         status: 'Dead',
-         species: 'Humanoid',
-         type: "Rick's Toxic Side",
-         gender: 'Male',
-         origin: {
-            name: 'Alien Spa',
-            url: 'https://rickandmortyapi.com/api/location/64',
-         },
-         location: {
-            name: 'Earth',
-            url: 'https://rickandmortyapi.com/api/location/20',
-         },
-         image: 'https://rickandmortyapi.com/api/character/avatar/361.jpeg',
-         episode: ['https://rickandmortyapi.com/api/episode/27'],
-         url: 'https://rickandmortyapi.com/api/character/361',
-         created: '2018-01-10T18:20:41.703Z',
-      },
-   ];
-
    const RYM_API = 'https://rickandmortyapi.com/api/character/?page=';
    const [numImage, setNumImage] = useState(1);
-   const [cards, setCards] = useState(heroPortrait);
+   const [cards, setCards] = useState([]);
 
    const loadDataApi = async () => {
       try {
@@ -53,6 +31,7 @@ export const StoreContextProvider = (props) => {
 
    const moveToRight = () => {
       setNumImage(numImage + 1);
+      // getUsuarios();
    };
 
    const handleButtonLeft = () => {
@@ -62,7 +41,44 @@ export const StoreContextProvider = (props) => {
       return numImage < 42 ? true : false;
    };
 
+   const [nameCard, setNameCard] = useState('');
+   const [cardsForName, setCardForName] = useState([]);
+   const RYM_API_FOR_NAME = 'https://rickandmortyapi.com/api/character/?name=';
+
+   const loadDataApiName = async () => {
+      try {
+         if (nameCard.length != 0) {
+            const res = await fetch(RYM_API_FOR_NAME + nameCard);
+            console.log(res);
+            if (res.status != 404) {
+               const data = await res.json();
+               const data2 = data.results;
+               setCardForName(data2);
+            }
+         } else {
+            setCardForName([]);
+         }
+      } catch (error) {
+         console.log(error);
+      }
+   };
+
    return (
-      <StoreContext.Provider value={{ cards, moveToLeft, moveToRight, handleButtonLeft, handleButtonRight }}>{props.children}</StoreContext.Provider>
+      <StoreContext.Provider
+         value={{
+            cards,
+            moveToLeft,
+            moveToRight,
+            handleButtonLeft,
+            handleButtonRight,
+            nameCard,
+
+            cardsForName,
+            loadDataApiName,
+            setNameCard,
+         }}
+      >
+         {props.children}
+      </StoreContext.Provider>
    );
 };

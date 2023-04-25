@@ -1,0 +1,90 @@
+.container-footer {
+   background-color: #2228;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   justify-content: center;
+   background-color: #ffffffed;
+   border-top-left-radius: 100px;
+   color: black;
+}
+.links-developer-contact {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.developer-name {
+   margin: 40px auto;
+}
+.developer-logo {
+   width: 75%;
+}
+
+.developer-details {
+   width: 100%;
+   color: #222;
+   padding: 30px 0px;
+}
+
+.container-icons-footer {
+   display: flex;
+   justify-content: space-evenly;
+   box-sizing: border-box;
+}
+
+.icon-social-media {
+   cursor: pointer;
+   height: 25px;
+   width: 25px;
+   padding: 5px;
+   border-bottom: 1px solid;
+   border-left: 1px solid;
+   border-right: 1px solid transparent;
+   border-top: 1px solid transparent;
+   transition: transform ease-in-out 0.3s;
+   transition: all ease-in-out 0.3s;
+}
+.icon-social-media:hover {
+   transform: translate(1px, -5px);
+   border-bottom: 1px solid transparent;
+   border-left: 1px solid transparent;
+   border-right: 1px solid;
+   border-top: 1px solid;
+}
+
+.copyright-footer {
+   flex-grow: 1;
+   margin: 10px 0;
+   width: 100vw;
+   text-align: center;
+   border-top: 2px solid #161616;
+}
+
+/* TABLET*/
+@media (min-width: 767px) {
+}
+
+/* DESKTOP*/
+@media (min-width: 1024px) {
+}
+
+.icon-instagram:hover {
+   color: #ff2679;
+}
+.icon-facebook:hover {
+   color: #0077ff;
+}
+.icon-linkedin:hover {
+   color: #1865fe;
+}
+.icon-github:hover {
+   color: #000000;
+}
+.icon-youtube:hover {
+   color: #ff0000;
+}
+.icon-twitter:hover {
+   color: #00d4d4;
+}

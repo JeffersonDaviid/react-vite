@@ -1,14 +1,11 @@
 .container-card {
    display: flex;
-   flex-direction: column;
+   flex-wrap: wrap;
    justify-content: center;
-   align-items: center;
    gap: 10px;
-   object-fit: cover;
-   height: 450px;
 
-   /* height: 100%; */
-   width: 300px;
+   padding: 10px;
+   margin: 0 10px;
    border-radius: 10px;
    border-top-right-radius: 30px;
    border: 1px solid white;
@@ -16,29 +13,55 @@
    -webkit-backdrop-filter: blur(10px);
    backdrop-filter: blur(7px);
    transition: background-color, border-color, box-shadow ease-in-out 0.4s;
+
+   /* height: 365px; */
+   min-height: min-content;
+   min-width: 275px;
+   max-width: max-content;
+
+   /* min-width: 330px; */
+   /* min-height: 100%; */
+   /* flex-direction: column; */
+   /* align-items: center; */
+   /* height: 450px; */
 }
+
 .container-card:hover {
    background-color: #01b7cf7e;
    border-color: #c1ee56;
-   box-shadow: 1px 1px 3px 3px #ffe600, 1px 1px 6px 6px #ff8800, 1px 1px 9px 9px #15ff00;
-}
+   box-shadow: 1px 1px 1px 1px #ffe600, 1px 1px 2px 2px #ff8800, 1px 1px 3px 3px #15ff00;
 
-.img-api {
-   /* width: 80%; */
-   height: 50%;
-   object-fit: contain;
-   border-radius: 10px;
+   transform: scale(1.025);
+   z-index: 1000;
 }
 
 .container-card-title {
    display: flex;
    justify-content: space-evenly;
-   width: 90%;
+   width: 100%;
+   gap: 10px;
+   align-items: center;
+   padding: 2px;
+}
+
+.container-card-main {
+   display: flex;
+}
+
+.img-card {
+   min-width: 110px;
+   max-width: 150px;
+   height: 100%;
+   object-position: center;
+   object-fit: contain;
+   border-radius: 10px;
 }
 
 .container-card-details {
    text-align: left;
-   width: 90%;
+   padding-left: 10px;
+   display: flex;
+   flex-direction: column;
 }
 
 .icon-like-fill {
@@ -64,4 +87,34 @@ b {
 }
 b:hover {
    color: #00e774;
+}
+
+.container-card-details span {
+   display: block;
+}
+
+.card-character-specie {
+   text-align: center;
+}
+
+/* TABLET*/
+@media (min-width: 640px) {
+   .container-card {
+      height: 365px;
+      width: max-content;
+      max-width: 275px;
+   }
+
+   .container-card-main {
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .container-card-details {
+      padding-left: 0px;
+   }
+
+   .img-card {
+      margin: auto;
+   }
 }

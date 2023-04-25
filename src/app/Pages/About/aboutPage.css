@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,700;1,300;1,900&display=swap');
+
+.container-contact-page {
+   display: flex;
+   flex-direction: column;
+   min-width: min-content;
+
+   font-family: 'Poppins', sans-serif;
+}
+
+.container-main-data-developer {
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+   padding: 5px 15px;
+}
+
+.img-profile {
+   position: relative;
+   width: 100px;
+   height: 100px;
+   border: 1px solid #fff;
+   border-radius: 100%;
+   object-fit: cover;
+   object-position: center;
+   background-color: #fce300;
+}
+
+.container-developer-details {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.developer-name-tittle {
+   font-size: 20px;
+   padding: 0;
+   display: block;
+   width: 23ch;
+   border-right: 4px solid;
+   white-space: nowrap;
+
+   animation: typing 4s steps(23) infinite alternate,
+      blink 0.4s infinite step-end alternate;
+   overflow: hidden;
+}
+
+@keyframes typing {
+   from {
+      width: 0;
+   }
+}
+
+@keyframes blink {
+   50% {
+      border-color: transparent;
+   }
+}
+.btn-contact {
+   cursor: pointer;
+   color: #fff;
+   background-color: #fc2a00;
+   display: inline-block;
+   width: max-content;
+   padding: 8px 25px;
+   border-radius: 20px;
+}
+
+.btn-contact:hover {
+   color: #fff;
+}
+
+.container-developer-description {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 10px 30px;
+   gap: 15px;
+}
+
+.skills {
+   border: 1px solid #fff;
+   border-radius: 20px;
+   text-align: center;
+   padding: 5px;
+}
+
+.skills img {
+   width: 200px;
+   height: 200px;
+}
+.skills p {
+   text-align: justify;
+}
+
+@media (min-width: 601px) {
+   .container-main-data-developer {
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 30px;
+      padding: 10px 30px;
+   }
+
+   .img-profile {
+      width: 200px;
+      height: 200px;
+   }
+
+   .container-developer-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .container-developer-description {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 10px 20px;
+   }
+}
+
+/* TABLET*/
+@media (min-width: 767px) {
+}
+
+/* DESKTOP*/
+@media (min-width: 1024px) {
+}
