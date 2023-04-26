@@ -1,4 +1,6 @@
 import React from 'react';
+import Logo from '../../images/LogoJefferson.png';
+
 import './footer.css';
 import {
    BsFacebook,
@@ -17,11 +19,7 @@ const Footer = () => {
                DEVELOPER: <br />
                JEFFERSON DAVID
             </h2>
-            <img
-               src='src/components/Footer/LogoJefferson.png'
-               className='developer-logo'
-               alt='Logo creador'
-            />
+            <img src={Logo} className='developer-logo' alt='Logo creador' />
          </div>
          <div className='developer-details'>
             <div className='container-icons-footer'>

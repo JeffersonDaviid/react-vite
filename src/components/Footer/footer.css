@@ -57,7 +57,7 @@
 .copyright-footer {
    flex-grow: 1;
    margin: 10px 0;
-   width: 100vw;
+   width: 100%;
    text-align: center;
    border-top: 2px solid #161616;
 }

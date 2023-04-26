@@ -21,7 +21,7 @@ function App() {
    return (
       <div className='App'>
          <NavBar />
-         <Routes>
+         <Routes className='routes-page-content'>
             <Route index path='/react-vite/' element={<Home />} />
             <Route path='/react-vite/sobre-nosotros' element={<AboutPage />} />
             <Route path='/react-vite/contactos' element={<ContactPage />} />
@@ -44,10 +44,7 @@ const Home = () => {
    } = useContext(StoreContext);
    return (
       <>
-         <h1 className='title'>
-            RICK and MORTY
-            <br /> STORE
-         </h1>
+         <h1 className='title'>RICK and MORTY</h1>
          <div className='container-cards-search'>
             {cardsForName.map((card) => (
                <Card data={card} key={card.id} />

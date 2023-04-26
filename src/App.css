@@ -1,16 +1,18 @@
 .App {
+   margin: 0;
+   padding: 0;
    background-image: url('https://wallpapercave.com/wp/wp6737027.jpg');
    background-color: #000000;
    background-position: top;
    background-size: cover;
    background-attachment: fixed;
    color: white;
-   min-width: 100vw;
+   width: 100%;
    min-height: 100vh;
 }
 
 .title {
-   font-family: Get Schwifty, sans-serif;
+   font-family: Get Schwifty;
    text-align: center;
    background: #04ff0e;
    background: linear-gradient(90deg, rgba(4, 255, 14, 1) 0%, rgba(0, 212, 255, 1) 100%);
@@ -21,6 +23,7 @@
    text-shadow: 1px 1px 5px #ecfd00;
    font-weight: bold;
    font-size: 50px;
+   margin: 20px 0;
 }
 
 .hero-container {
@@ -64,6 +67,7 @@
 
 .container-cards-search {
    width: 100vw;
+   width: 100%;
    height: max-content;
    padding: 20px 0;
    margin: auto;
@@ -142,4 +146,9 @@
 
 /* DESKTOP*/
 @media (min-width: 1024px) {
+}
+
+.routes-page-content {
+   margin: 0;
+   width: 50%;
 }
