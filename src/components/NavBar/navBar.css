@@ -106,7 +106,7 @@
 }
 
 /* TABLET*/
-@media (min-width: 767px) {
+@media (min-width: 768px) {
    .icon-close-navbar,
    .icon-menu-nav {
       display: none;
